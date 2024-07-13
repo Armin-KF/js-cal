@@ -1,20 +1,5 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: hsl(222, 26%, 31%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +7,258 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
 }
 
-.App-link {
-  color: #61dafb;
+#calc-screen {
+  position: relative;
+  background-color: hsl(224, 36%, 15%);
+  width: 450px;
+  height: 115px;
+  margin-bottom: 450px;
+  border-radius: 10px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#calc-result {
+  position: absolute;
+  top: 35px;
+  left: 15px;
+  font-size: 48px;
+  color: hsl(0, 0%, 100%);
+  width: calc(100% - 40px);
+  height: calc(100% - 25px);
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 10;
+}
+
+#calc-h2 {
+  margin-right: 420px;
+  margin-top: -40px;
+  font-size: 32px;
+}
+
+#calc-h4 {
+  margin-left: 250px;
+  margin-top: -40px;
+  font-size: 12px;
+}
+
+#calc-theme-btn {
+  width: 60px;
+  height: 17px;
+  background-color: hsl(224, 36%, 15%);
+  border: none;
+  border-radius: 15px;
+  margin-left: 370px;
+  transform: translateY(-30px);
+  cursor: pointer;
+}
+
+#calc-theme-p-1 {
+  font-size: 12px;
+  color: hsl(0, 0%, 100%);
+  margin-top: -70px;
+  margin-left: 330px;
+}
+
+#calc-theme-p-2 {
+  font-size: 12px;
+  color: hsl(0, 0%, 100%);
+  margin-top: -23px;
+  margin-left: 370px;
+}
+
+#calc-theme-p-3 {
+  font-size: 12px;
+  color: hsl(0, 0%, 100%);
+  margin-top: -23px;
+  margin-left: 410px;
+}
+
+#calc-theme-btn-circle {
+  width: 13px;
+  height: 14px;
+  background-color: hsl(6, 63%, 50%);
+  border: none;
+  border-radius: 50%;
+  margin-top: 30.5px;
+  margin-left: -4px;
+  transform: translateY(-30px);
+  cursor: pointer;
+}
+
+#calc-keys-board {
+  margin-left: 0px;
+  margin-top: 180px;
+  width: 450px;
+  height: 475px;
+  border-radius: 10px;
+  background-color: hsl(223, 31%, 20%);
+}
+
+#calc-keys-board-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-left: 26px;
+  transform: translateY(30px);
+  width: 400px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: hsl(223, 31%, 20%);
+}
+
+#calc-key-7,
+#calc-key-8,
+#calc-key-9 {
+  background-color: hsl(30, 25%, 89%);
+  border: none;
+  border-radius: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(221, 14%, 31%);
+  cursor: pointer;
+  box-shadow: 0px 7px 0px 0px rgb(192, 184, 176);
+  -webkit-box-shadow: 0px 7px 0px 0px rgb(208, 199, 190);
+  -moz-box-shadow: 0px 7px 0px 0px rgb(200, 191, 181);
+}
+
+#calc-key-del {
+  background-color: hsl(225, 21%, 49%);
+  border: none;
+  border-radius: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  box-shadow: 0px 7px 0px 0px rgba(64, 78, 114, 1);
+  -webkit-box-shadow: 0px 7px 0px 0px rgba(64, 78, 114, 1);
+  -moz-box-shadow: 0px 7px 0px 0px rgba(64, 78, 114, 1);
+}
+
+#calc-keys-board-middle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-left: 26px;
+  transform: translateY(60px);
+  width: 400px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: hsl(223, 31%, 20%);
+}
+
+#calc-key-4,
+#calc-key-5,
+#calc-key-6,
+#calc-key-plus {
+  background-color: hsl(30, 25%, 89%);
+  border: none;
+  border-radius: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(221, 14%, 31%);
+  cursor: pointer;
+  box-shadow: 0px 7px 0px 0px rgb(192, 184, 176);
+  -webkit-box-shadow: 0px 7px 0px 0px rgb(208, 199, 190);
+  -moz-box-shadow: 0px 7px 0px 0px rgb(200, 191, 181);
+}
+
+#calc-keys-board-bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-left: 26px;
+  transform: translateY(90px);
+  width: 400px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: hsl(223, 31%, 20%);
+}
+
+#calc-key-1,
+#calc-key-2,
+#calc-key-3,
+#calc-key-minus {
+  background-color: hsl(30, 25%, 89%);
+  border: none;
+  border-radius: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(221, 14%, 31%);
+  cursor: pointer;
+  box-shadow: 0px 7px 0px 0px rgb(192, 184, 176);
+  -webkit-box-shadow: 0px 7px 0px 0px rgb(208, 199, 190);
+  -moz-box-shadow: 0px 7px 0px 0px rgb(200, 191, 181);
+}
+
+#calc-keys-board-last {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-left: 26px;
+  transform: translateY(120px);
+  width: 400px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: hsl(223, 31%, 20%);
+}
+
+#calc-key-dot,
+#calc-key-0,
+#calc-key-multiply,
+#calc-key-division {
+  background-color: hsl(30, 25%, 89%);
+  border: none;
+  border-radius: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(221, 14%, 31%);
+  cursor: pointer;
+  box-shadow: 0px 7px 0px 0px rgb(192, 184, 176);
+  -webkit-box-shadow: 0px 7px 0px 0px rgb(208, 199, 190);
+  -moz-box-shadow: 0px 7px 0px 0px rgb(200, 191, 181);
+}
+
+#calc-keys-board-reset-equal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-left: 26px;
+  transform: translateY(150px);
+  width: 400px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: hsl(223, 31%, 20%);
+}
+
+#calc-key-reset {
+  background-color: hsl(225, 21%, 49%);
+  border: none;
+  border-radius: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  box-shadow: 0px 7px 0px 0px rgba(64, 78, 114, 1);
+  -webkit-box-shadow: 0px 7px 0px 0px rgba(64, 78, 114, 1);
+  -moz-box-shadow: 0px 7px 0px 0px rgba(64, 78, 114, 1);
+}
+
+#calc-key-equal {
+  background-color: hsl(6, 63%, 50%);
+  border: none;
+  border-radius: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  box-shadow: 0px 7px 0px 0px rgba(147, 38, 26, 1);
+  -webkit-box-shadow: 0px 7px 0px 0px rgba(147, 38, 26, 1);
+  -moz-box-shadow: 0px 7px 0px 0px rgba(147, 38, 26, 1);
 }
