@@ -1,6 +1,7 @@
 {
   "name": "js-cal",
   "version": "0.1.0",
+  "homepage": "http://Armin-KF.github.io/js-cal",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
