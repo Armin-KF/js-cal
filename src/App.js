@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { evaluate } from "mathjs";
 import "./App.css";
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
   const handleClick = (value) => {
     if (value === "=") {
       try {
-        const result = eval(display.replace(/x/g, "*")).toString();
+        const result = evaluate(display.replace(/x/g, "*")).toString();
         setDisplay(result);
       } catch {
         setDisplay("Error");
